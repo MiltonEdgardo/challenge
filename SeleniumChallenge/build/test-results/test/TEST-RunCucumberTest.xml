@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RunCucumberTest" tests="10" skipped="0" failures="1" errors="0" timestamp="2025-08-01T16:18:44" hostname="MILTON" time="45.087">
+  <properties/>
+  <testcase name="Example #1.1" classname="RunCucumberTest" time="4.139"/>
+  <testcase name="Example #1.2" classname="RunCucumberTest" time="9.148">
+    <failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //span[@data-test=&quot;title&quot;]' (tried for 5 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //span[@data-test=&quot;title&quot;]' (tried for 5 second(s) with 500 milliseconds interval)
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//utils.ExplicitWaitManager.waitUntilBeVisible(ExplicitWaitManager.java:23)
+	at app//pages.BasePage.getText(BasePage.java:34)
+	at app//pages.HomePage.getProductText(HomePage.java:19)
+	at app//steps.LoginTest.userRedirectToProductsPage(LoginTest.java:32)
+	at ✽.the user should see the home page with the products(classpath:features/Login.feature:7)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@data-test=&quot;title&quot;]&quot;}
+  (Session info: chrome=138.0.7204.184)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [333768e143b7e4732fd4c52606c7f085, findElement {value=//span[@data-test=&quot;title&quot;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\azrae\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63180}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63180/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 333768e143b7e4732fd4c52606c7f085
+	at java.base@17.0.10/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base@17.0.10/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at app//org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at app//org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at app/jdk.proxy3/jdk.proxy3.$Proxy26.isDisplayed(Unknown Source)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at app//org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 5 more
+</failure>
+  </testcase>
+  <testcase name="Example #1.3" classname="RunCucumberTest" time="3.414"/>
+  <testcase name="Example #1.4" classname="RunCucumberTest" time="8.428"/>
+  <testcase name="Example #1.5" classname="RunCucumberTest" time="3.439"/>
+  <testcase name="Example #1.6" classname="RunCucumberTest" time="3.427"/>
+  <testcase name="Example #1.1" classname="RunCucumberTest" time="3.367"/>
+  <testcase name="Example #1.2" classname="RunCucumberTest" time="3.362"/>
+  <testcase name="Example #1.3" classname="RunCucumberTest" time="3.394"/>
+  <testcase name="Getting the response from ML url" classname="RunCucumberTest" time="2.966"/>
+  <system-out><![CDATA[
+@loginSuccess
+?[1mScenario Outline:?[22m Login with correct credentials             ?[90m# classpath:features/Login.feature:11?[39m
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22ma user, goes to the login page?[39m                     ?[90m# steps.LoginTest.goToLoginPage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mthe user enters ?[1m"standard_user"?[22m and ?[1m"secret_sauce"?[22m?[39m  ?[90m# steps.LoginTest.userEnterUserAndPass(java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mthe user should see the home page with the products?[39m ?[90m# steps.LoginTest.userRedirectToProductsPage()?[39m
+
+@loginSuccess
+?[1mScenario Outline:?[22m Login with correct credentials              ?[90m# classpath:features/Login.feature:12?[39m
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22ma user, goes to the login page?[39m                      ?[90m# steps.LoginTest.goToLoginPage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mthe user enters ?[1m"locked_out_user"?[22m and ?[1m"secret_sauce"?[22m?[39m ?[90m# steps.LoginTest.userEnterUserAndPass(java.lang.String,java.lang.String)?[39m
+  ?[31m✘?[39m ?[31m?[1mThen ?[22mthe user should see the home page with the products?[39m  ?[90m# steps.LoginTest.userRedirectToProductsPage()?[39m
+        ?[31morg.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //span[@data-test="title"]' (tried for 5 second(s) with 500 milliseconds interval)?[39m
+        ?[31m	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)?[39m
+        ?[31m	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)?[39m
+        ?[31m	at utils.ExplicitWaitManager.waitUntilBeVisible(ExplicitWaitManager.java:23)?[39m
+        ?[31m	at pages.BasePage.getText(BasePage.java:34)?[39m
+        ?[31m	at pages.HomePage.getProductText(HomePage.java:19)?[39m
+        ?[31m	at steps.LoginTest.userRedirectToProductsPage(LoginTest.java:32)?[39m
+        ?[31m	at ✽.the user should see the home page with the products(classpath:features/Login.feature:7)?[39m
+        ?[31mCaused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@data-test="title"]"}?[39m
+        ?[31m  (Session info: chrome=138.0.7204.184)?[39m
+        ?[31mFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception?[39m
+        ?[31mBuild info: version: '4.34.0', revision: '707dcb4246*'?[39m
+        ?[31mSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'?[39m
+        ?[31mDriver info: org.openqa.selenium.chrome.ChromeDriver?[39m
+        ?[31mCommand: [333768e143b7e4732fd4c52606c7f085, findElement {value=//span[@data-test="title"], using=xpath}]?[39m
+        ?[31mCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\azrae\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63180}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63180/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}?[39m
+        ?[31mSession ID: 333768e143b7e4732fd4c52606c7f085?[39m
+        ?[31m	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)?[39m
+        ?[31m	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)?[39m
+        ?[31m	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)?[39m
+        ?[31m	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)?[39m
+        ?[31m	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)?[39m
+        ?[31m	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)?[39m
+        ?[31m	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)?[39m
+        ?[31m	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)?[39m
+        ?[31m	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)?[39m
+        ?[31m	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)?[39m
+        ?[31m	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)?[39m
+        ?[31m	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)?[39m
+        ?[31m	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)?[39m
+        ?[31m	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)?[39m
+        ?[31m	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)?[39m
+        ?[31m	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)?[39m
+        ?[31m	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)?[39m
+        ?[31m	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)?[39m
+        ?[31m	at jdk.proxy3/jdk.proxy3.$Proxy26.isDisplayed(Unknown Source)?[39m
+        ?[31m	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)?[39m
+        ?[31m	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)?[39m
+        ?[31m	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)?[39m
+        ?[31m	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)?[39m
+        ?[31m	... 5 more?[39m
+
+        ?[34mEmbedding Failed Screenshot [image/png 41469 bytes]?[39m
+
+
+@loginSuccess
+?[1mScenario Outline:?[22m Login with correct credentials             ?[90m# classpath:features/Login.feature:13?[39m
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22ma user, goes to the login page?[39m                     ?[90m# steps.LoginTest.goToLoginPage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mthe user enters ?[1m"problem_user"?[22m and ?[1m"secret_sauce"?[22m?[39m   ?[90m# steps.LoginTest.userEnterUserAndPass(java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mthe user should see the home page with the products?[39m ?[90m# steps.LoginTest.userRedirectToProductsPage()?[39m
+
+@loginSuccess
+?[1mScenario Outline:?[22m Login with correct credentials                      ?[90m# classpath:features/Login.feature:14?[39m
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22ma user, goes to the login page?[39m                              ?[90m# steps.LoginTest.goToLoginPage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mthe user enters ?[1m"performance_glitch_user"?[22m and ?[1m"secret_sauce"?[22m?[39m ?[90m# steps.LoginTest.userEnterUserAndPass(java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mthe user should see the home page with the products?[39m          ?[90m# steps.LoginTest.userRedirectToProductsPage()?[39m
+
+@loginSuccess
+?[1mScenario Outline:?[22m Login with correct credentials             ?[90m# classpath:features/Login.feature:15?[39m
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22ma user, goes to the login page?[39m                     ?[90m# steps.LoginTest.goToLoginPage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mthe user enters ?[1m"error_user"?[22m and ?[1m"secret_sauce"?[22m?[39m     ?[90m# steps.LoginTest.userEnterUserAndPass(java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mthe user should see the home page with the products?[39m ?[90m# steps.LoginTest.userRedirectToProductsPage()?[39m
+
+@loginSuccess
+?[1mScenario Outline:?[22m Login with correct credentials             ?[90m# classpath:features/Login.feature:16?[39m
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22ma user, goes to the login page?[39m                     ?[90m# steps.LoginTest.goToLoginPage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mthe user enters ?[1m"visual_user"?[22m and ?[1m"secret_sauce"?[22m?[39m    ?[90m# steps.LoginTest.userEnterUserAndPass(java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mthe user should see the home page with the products?[39m ?[90m# steps.LoginTest.userRedirectToProductsPage()?[39m
+
+@loginFail
+?[1mScenario Outline:?[22m Login with placeholders empty                                              ?[90m# classpath:features/Login.feature:26?[39m
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22ma user, goes to the login page?[39m                                                     ?[90m# steps.LoginTest.goToLoginPage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mthe user enters ?[1m""?[22m and ?[1m""?[22m?[39m                                                           ?[90m# steps.LoginTest.userEnterUserAndPass(java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mthe user should see an alert message that said ?[1m"Epic sadface: Username is required"?[22m?[39m ?[90m# steps.LoginTest.userReceiveALoginErrorMessage(java.lang.String)?[39m
+
+@loginFail
+?[1mScenario Outline:?[22m Login with placeholders empty                                              ?[90m# classpath:features/Login.feature:27?[39m
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22ma user, goes to the login page?[39m                                                     ?[90m# steps.LoginTest.goToLoginPage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mthe user enters ?[1m"standard_user"?[22m and ?[1m""?[22m?[39m                                              ?[90m# steps.LoginTest.userEnterUserAndPass(java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mthe user should see an alert message that said ?[1m"Epic sadface: Password is required"?[22m?[39m ?[90m# steps.LoginTest.userReceiveALoginErrorMessage(java.lang.String)?[39m
+
+@loginFail
+?[1mScenario Outline:?[22m Login with placeholders empty                                              ?[90m# classpath:features/Login.feature:28?[39m
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22ma user, goes to the login page?[39m                                                     ?[90m# steps.LoginTest.goToLoginPage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mthe user enters ?[1m""?[22m and ?[1m"secret_sauce"?[22m?[39m                                               ?[90m# steps.LoginTest.userEnterUserAndPass(java.lang.String,java.lang.String)?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mthe user should see an alert message that said ?[1m"Epic sadface: Username is required"?[22m?[39m ?[90m# steps.LoginTest.userReceiveALoginErrorMessage(java.lang.String)?[39m
+
+@MLService
+?[1mScenario:?[22m Getting the response from ML url                 ?[90m# classpath:features/ML.feature:4?[39m
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22ma user, goes to the ML url?[39m                       ?[90m# steps.MLTest.setTheUrlService()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mthe user receive the response from the page?[39m       ?[90m# steps.MLTest.GetTheServiceResponse()?[39m
+First department found: Tecnología
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mthe user should see the departments options in it?[39m ?[90m# steps.MLTest.validateDepartmentElements()?[39m
+]]></system-out>
+  <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+ago. 01, 2025 1:19:29 P. M. org.junit.platform.launcher.core.DiscoveryIssueNotifier logIssues
+WARNING: TestEngine with ID 'cucumber' encountered a non-critical issue during test discovery:
+
+(1) [WARNING] The classpath resource selector 'features' should not be used to select features in a package. Use the package selector with 'features' instead
+]]></system-err>
+</testsuite>

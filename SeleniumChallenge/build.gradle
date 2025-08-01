@@ -1,0 +1,43 @@
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitJupiterVersion = '5.13.4'
+    junitPlatformSuiteVersion = '1.13.4'
+    cucumberVersion = '7.27.0'
+    seleniumJavaVersion = '4.34.0'
+    webdrivermanagerVersion  = '6.2.0'
+    restAssured = '5.5.5'
+    extentReport = '5.1.1'
+    lombok = '1.18.38'
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+test {
+    useJUnitPlatform()
+
+    testLogging {
+        events "passed", "skipped", "failed"
+        showStandardStreams = true
+    }
+
+}
+
+
+dependencies {
+
+    testImplementation("org.junit.jupiter:junit-jupiter:${junitJupiterVersion}")
+    testImplementation("org.junit.platform:junit-platform-suite:${junitPlatformSuiteVersion}")
+    testImplementation("io.cucumber:cucumber-java:${cucumberVersion}")
+    testImplementation("io.cucumber:cucumber-junit-platform-engine:${cucumberVersion}")
+    testImplementation("org.seleniumhq.selenium:selenium-java:${seleniumJavaVersion}")
+    testImplementation("io.github.bonigarcia:webdrivermanager:${webdrivermanagerVersion}")
+    implementation("com.aventstack:extentreports:${extentReport}")
+    implementation("org.projectlombok:lombok:${lombok}")
+    testImplementation("io.rest-assured:rest-assured:${restAssured}")
+
+
+}
